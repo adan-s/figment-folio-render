@@ -3,7 +3,7 @@ export default function Experience() {
     <div className="space-y-16">
       {/* Hero Section */}
       <section>
-        <h1 className="text-6xl font-bold text-foreground">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
           UX/UI
           <br />
           <span className="text-portfolio-text-muted">DESIGNER</span>
@@ -16,23 +16,23 @@ export default function Experience() {
 
       {/* Experience Timeline */}
       <section>
-        <h2 className="text-4xl font-bold text-foreground mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 md:mb-8">
           2 YEARS OF
           <br />
           <span className="text-portfolio-text-muted">EXPERIENCE</span>
         </h2>
         
         <div className="space-y-12">
-          <div className="border-l-2 border-border pl-8 relative">
+          <div className="border-l-2 border-border pl-6 md:pl-8 relative">
             <div className="absolute -left-2 top-0 w-4 h-4 bg-portfolio-orange rounded-full"></div>
-            <div className="flex justify-between items-start mb-4">
-              <h3 className="text-2xl font-semibold text-foreground">Associate UI/UX Designer</h3>
-              <span className="text-portfolio-text-muted font-medium">Code District</span>
+            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
+              <h3 className="text-xl md:text-2xl font-semibold text-foreground">Associate UI/UX Designer</h3>
+              <span className="text-portfolio-text-muted font-medium text-sm md:text-base">Code District</span>
             </div>
             <p className="text-portfolio-text-muted mb-4 leading-relaxed">
               Designed intuitive web/mobile UIs, maintained the design system, and ensured smooth cross-functional collaboration
             </p>
-            <div className="flex justify-between items-center text-sm text-portfolio-text-muted">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-center text-xs md:text-sm text-portfolio-text-muted gap-1">
               <span className="font-medium">07/2024 - Present</span>
               <span>Full time Onsite, Lahore, Pakistan</span>
             </div>

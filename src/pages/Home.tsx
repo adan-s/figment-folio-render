@@ -52,53 +52,53 @@ export default function Home() {
     <div className="space-y-16">
       {/* Hero Section */}
       <section>
-        <div className="flex items-center gap-8">
-          <div>
-            <h1 className="text-6xl font-bold text-foreground">
-              UX/UI
-              <br />
-              <span className="text-portfolio-text-muted">DESIGNER</span>
-            </h1>
+        <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-8">
+          <div className="flex-1">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+          UX/UI
+          <br />
+          <span className="text-portfolio-text-muted">DESIGNER</span>
+        </h1>
             <p className="text-portfolio-text-muted mt-6 max-w-lg leading-relaxed">
               Passionate about crafting intuitive, engaging experiences that bring ideas to life. 
               With a focus on beauty, clarity, and purpose, I transform visions into timeless digital products.
             </p>
           </div>
           
-          <div className="flex gap-4">
-            <Card className="bg-portfolio-orange p-6 text-background">
+          <div className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start">
+            <Card className="bg-portfolio-orange p-4 md:p-6 text-background">
               <CardContent className="p-0">
-                <div className="text-3xl font-bold">2</div>
-                <div className="text-sm">Years</div>
+                <div className="text-2xl md:text-3xl font-bold">2</div>
+                <div className="text-xs md:text-sm">Years</div>
               </CardContent>
             </Card>
             
-            <Card className="bg-portfolio-orange p-6 text-background">
+            <Card className="bg-portfolio-orange p-4 md:p-6 text-background">
               <CardContent className="p-0">
-                <div className="text-3xl font-bold">+20</div>
-                <div className="text-sm">Projects</div>
+                <div className="text-2xl md:text-3xl font-bold">+20</div>
+                <div className="text-xs md:text-sm">Projects</div>
               </CardContent>
             </Card>
             
-            <Card className="bg-portfolio-green p-6 text-background">
+            <Card className="bg-portfolio-green p-4 md:p-6 text-background">
               <CardContent className="p-0">
-                <div className="text-3xl font-bold">90%</div>
-                <div className="text-sm">Success</div>
+                <div className="text-2xl md:text-3xl font-bold">90%</div>
+                <div className="text-xs md:text-sm">Success</div>
               </CardContent>
             </Card>
           </div>
         </div>
         
-        <div className="mt-8 grid grid-cols-2 gap-4 max-w-md">
-          <Card className="bg-portfolio-orange p-4 text-background text-center">
+        <div className="mt-6 lg:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md">
+          <Card className="bg-portfolio-orange p-3 md:p-4 text-background text-center">
             <CardContent className="p-0">
-              <div className="text-sm font-medium">DYNAMIC ANIMATION</div>
+              <div className="text-xs md:text-sm font-medium">DYNAMIC ANIMATION</div>
               <div className="text-xs">MOTION DESIGNER</div>
             </CardContent>
           </Card>
-          <Card className="bg-portfolio-green p-4 text-background text-center">
+          <Card className="bg-portfolio-green p-3 md:p-4 text-background text-center">
             <CardContent className="p-0">
-              <div className="text-sm font-medium">SKETCH, WIREFRAME, UX</div>
+              <div className="text-xs md:text-sm font-medium">SKETCH, WIREFRAME, UX</div>
               <div className="text-xs">PROTOTYPING</div>
             </CardContent>
           </Card>
@@ -107,7 +107,7 @@ export default function Home() {
 
       {/* Recent Projects */}
       <section>
-        <h2 className="text-4xl font-bold text-foreground mb-2">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
           RECENT
           <br />
           <span className="text-portfolio-text-muted">PROJECTS</span>
@@ -116,15 +116,15 @@ export default function Home() {
         <div className="space-y-4 mt-8">
           {projects.map((project, index) => (
             <Card key={index} className="bg-card border-border hover:bg-secondary/50 transition-colors cursor-pointer">
-              <CardContent className="p-6 flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <div className={`w-12 h-12 ${project.color} rounded-lg`}></div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">{project.name}</h3>
-                    <p className="text-sm text-portfolio-text-muted">{project.description}</p>
+              <CardContent className="p-4 md:p-6 flex items-center justify-between">
+                  <div className="flex items-center gap-3 md:gap-4">
+                    <div className={`w-10 h-10 md:w-12 md:h-12 ${project.color} rounded-lg flex-shrink-0`}></div>
+                    <div className="min-w-0">
+                      <h3 className="font-semibold text-foreground text-sm md:text-base truncate">{project.name}</h3>
+                      <p className="text-xs md:text-sm text-portfolio-text-muted line-clamp-2">{project.description}</p>
+                    </div>
                   </div>
-                </div>
-                <ExternalLink className="text-portfolio-text-muted" size={20} />
+                <ExternalLink className="text-portfolio-text-muted flex-shrink-0" size={16} />
               </CardContent>
             </Card>
           ))}
@@ -133,7 +133,7 @@ export default function Home() {
 
       {/* Experience */}
       <section>
-        <h2 className="text-4xl font-bold text-foreground mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 md:mb-8">
           2 YEARS OF
           <br />
           <span className="text-portfolio-text-muted">EXPERIENCE</span>
@@ -141,14 +141,14 @@ export default function Home() {
         
         <div className="space-y-8">
           <div>
-            <div className="flex justify-between items-start mb-2">
-              <h3 className="text-xl font-semibold text-foreground">Associate UI/UX Designer</h3>
-              <span className="text-portfolio-text-muted">Code District</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-1">
+              <h3 className="text-lg md:text-xl font-semibold text-foreground">Associate UI/UX Designer</h3>
+              <span className="text-portfolio-text-muted text-sm md:text-base">Code District</span>
             </div>
             <p className="text-portfolio-text-muted text-sm mb-1">
               Designed intuitive web/mobile UIs, maintained the design system, and ensured smooth cross-functional collaboration
             </p>
-            <div className="flex justify-between items-center text-sm text-portfolio-text-muted">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center text-xs md:text-sm text-portfolio-text-muted gap-1">
               <span>07/2024 - Present</span>
               <span>Full time Onsite, Lahore, Pakistan</span>
             </div>
@@ -192,12 +192,12 @@ export default function Home() {
           <span className="text-portfolio-text-muted">TOOLS</span>
         </h2>
         
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
           {tools.map((tool, index) => (
-            <Card key={index} className="bg-card border-border p-4 text-center hover:bg-secondary/50 transition-colors">
+            <Card key={index} className="bg-card border-border p-3 md:p-4 text-center hover:bg-secondary/50 transition-colors">
               <CardContent className="p-0">
-                <div className="text-2xl mb-2">{tool.icon}</div>
-                <div className="text-sm font-medium text-foreground">{tool.name}</div>
+                <div className="text-xl md:text-2xl mb-1 md:mb-2">{tool.icon}</div>
+                <div className="text-xs md:text-sm font-medium text-foreground">{tool.name}</div>
               </CardContent>
             </Card>
           ))}
@@ -245,7 +245,7 @@ export default function Home() {
         
         <Card className="bg-card border-border">
           <CardContent className="p-8 space-y-6">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="text-sm text-portfolio-text-muted">Name</label>
                 <Input className="mt-1 bg-background border-border" placeholder="Enter your name" />
@@ -266,7 +266,7 @@ export default function Home() {
               <Textarea className="mt-1 bg-background border-border" rows={6} placeholder="Enter your message" />
             </div>
             
-            <Button className="bg-portfolio-orange hover:bg-portfolio-orange/90 text-background w-full py-6 text-lg">
+            <Button className="bg-portfolio-orange hover:bg-portfolio-orange/90 text-background w-full py-4 md:py-6 text-base md:text-lg">
               Send Message
             </Button>
           </CardContent>

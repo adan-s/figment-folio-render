@@ -13,12 +13,12 @@ export const Layout = ({ children }: LayoutProps) => {
       <Navigation />
       <ContactButtons />
       
-      <div className="flex gap-12 p-12 pt-24">
-        <aside className="flex-shrink-0">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 p-4 md:p-8 lg:p-12 pt-20 md:pt-24">
+        <aside className="flex-shrink-0 w-full lg:w-auto flex justify-center lg:block">
           <ProfileCard />
         </aside>
         
-        <main className="flex-1 max-w-4xl">
+        <main className="flex-1 w-full lg:max-w-4xl">
           {children}
         </main>
       </div>

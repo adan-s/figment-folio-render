@@ -58,7 +58,7 @@ export default function Projects() {
     <div className="space-y-16">
       {/* Hero Section */}
       <section>
-        <h1 className="text-6xl font-bold text-foreground">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
           UX/UI
           <br />
           <span className="text-portfolio-text-muted">DESIGNER</span>
@@ -71,7 +71,7 @@ export default function Projects() {
 
       {/* Recent Projects */}
       <section>
-        <h2 className="text-4xl font-bold text-foreground mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 md:mb-8">
           RECENT
           <br />
           <span className="text-portfolio-text-muted">PROJECTS</span>
@@ -81,17 +81,17 @@ export default function Projects() {
           {projects.map((project, index) => (
             <Link key={index} to={`/projects/${project.slug}`}>
               <Card className="bg-card border-border hover:bg-secondary/50 transition-colors cursor-pointer group">
-                <CardContent className="p-6 flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <div className={`w-16 h-16 ${project.color} rounded-lg`}></div>
-                    <div>
-                      <h3 className="font-semibold text-foreground text-xl group-hover:text-portfolio-orange transition-colors">
+                <CardContent className="p-4 md:p-6 flex items-center justify-between">
+                  <div className="flex items-center gap-3 md:gap-4 min-w-0 flex-1">
+                    <div className={`w-12 h-12 md:w-16 md:h-16 ${project.color} rounded-lg flex-shrink-0`}></div>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-semibold text-foreground text-base md:text-xl group-hover:text-portfolio-orange transition-colors truncate">
                         {project.name}
                       </h3>
-                      <p className="text-portfolio-text-muted">{project.description}</p>
+                      <p className="text-portfolio-text-muted text-sm md:text-base line-clamp-2">{project.description}</p>
                     </div>
                   </div>
-                  <ExternalLink className="text-portfolio-text-muted group-hover:text-portfolio-orange transition-colors" size={24} />
+                  <ExternalLink className="text-portfolio-text-muted group-hover:text-portfolio-orange transition-colors flex-shrink-0" size={20} />
                 </CardContent>
               </Card>
             </Link>

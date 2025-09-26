@@ -2,12 +2,12 @@ import profilePhoto from '@/assets/profile-photo.jpg';
 
 export const ProfileCard = () => {
   return (
-    <div className="bg-card p-8 rounded-2xl w-80 flex flex-col items-center text-center space-y-6">
+    <div className="bg-card p-6 md:p-8 rounded-2xl w-full max-w-sm lg:w-80 flex flex-col items-center text-center space-y-4 md:space-y-6">
       <div className="relative">
         <img 
           src={profilePhoto} 
           alt="Maryam Saeed" 
-          className="w-48 h-48 rounded-2xl object-cover"
+          className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-2xl object-cover"
         />
         <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
           <div className="bg-portfolio-orange w-8 h-8 rounded-full flex items-center justify-center">

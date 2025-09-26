@@ -27,7 +27,7 @@ export default function Writings() {
     <div className="space-y-16">
       {/* Hero Section */}
       <section>
-        <h1 className="text-6xl font-bold text-foreground">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
           UX/UI
           <br />
           <span className="text-portfolio-text-muted">DESIGNER</span>
@@ -40,7 +40,7 @@ export default function Writings() {
 
       {/* Design Thoughts */}
       <section>
-        <h2 className="text-4xl font-bold text-foreground mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 md:mb-8">
           DESIGN
           <br />
           <span className="text-portfolio-text-muted">THOUGHTS</span>
@@ -49,14 +49,14 @@ export default function Writings() {
         <div className="space-y-8">
           {articles.map((article, index) => (
             <Card key={index} className="bg-card border-border hover:bg-secondary/50 transition-colors cursor-pointer group">
-              <CardContent className="p-8">
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="font-semibold text-foreground text-2xl leading-tight flex-1 pr-6 group-hover:text-portfolio-orange transition-colors">
+              <CardContent className="p-4 md:p-6 lg:p-8">
+                <div className="flex items-start justify-between mb-4 gap-4">
+                  <h3 className="font-semibold text-foreground text-lg md:text-xl lg:text-2xl leading-tight flex-1 group-hover:text-portfolio-orange transition-colors">
                     {article.title}
                   </h3>
-                  <ExternalLink className="text-portfolio-text-muted group-hover:text-portfolio-orange transition-colors flex-shrink-0 mt-1" size={24} />
+                  <ExternalLink className="text-portfolio-text-muted group-hover:text-portfolio-orange transition-colors flex-shrink-0 mt-1" size={20} />
                 </div>
-                <p className="text-portfolio-text-muted mb-6 leading-relaxed text-lg">
+                <p className="text-portfolio-text-muted mb-4 md:mb-6 leading-relaxed text-sm md:text-base lg:text-lg">
                   {article.description}
                 </p>
                 <div className="flex justify-between items-center text-sm text-portfolio-text-muted">
