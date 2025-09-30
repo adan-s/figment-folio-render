@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Layers, Grid2X2 } from "lucide-react";
+import { ExternalLink, Layers, Grid2X2, Link } from "lucide-react";
 
 import tvBitsImage from "@/assets/tv-bits.png";
 import lvTechImage from "@/assets/lv-tech.png";
@@ -12,7 +12,7 @@ import lordevImage from "@/assets/lordev.png";
 import moreLifeImage from "@/assets/more-life.png";
 import nobleAdventureImage from "@/assets/noble-adventure.png";
 import gymRepairsImage from "@/assets/gym-repairs.png";
-
+import cumberlandBiotherapeuticsImage from "@/assets/cumberland.png";
 // Tool images
 import figmaImage from "@/assets/figma.png";
 import chatgptImage from "@/assets/chatgpt.png";
@@ -28,36 +28,48 @@ const projects = [
     name: "Mind Hush",
     description: "AI-driven mental health chatbot",
     image: mindHushImage,
+    link: "/projects/mind-hush",
   },
   {
     name: "Lotto Strategies",
     description: "Lottery Strategy tools and Guidance",
     image: lottoStrategiesImage,
+    link: "/projects/lotto-strategies",
   },
-  { name: "LORDEV", description: "Soft Dev Company site", image: lordevImage },
+  { name: "LORDEV", description: "Soft Dev Company site", image: lordevImage, link: "/projects/lordev" },
   {
     name: "More Life",
     description: "Event Management and Ticketing System",
     image: moreLifeImage,
+    link: "/projects/more-life",
   },
   {
     name: "Noble Adventure",
     description: "Travel and Tourism Company",
     image: nobleAdventureImage,
+    link: "/projects/noble-adventure",
+  },
+  { name: "TV BITS", description: "Streaming Platform", image: tvBitsImage, link: "/projects/tv-bits" },
+  {
+    name: "Cumberland Biotherapeutics",
+    description: "health-focused organization site",
+    image: cumberlandBiotherapeuticsImage,
   },
   {
     name: "GYM REPAIRS",
     description: "Gym Repair and Maintenance Company site",
     image: gymRepairsImage,
+    link: "/projects/gym-repairs",
   },
 ];
 
 const caseStudies = [
-  { name: "TV BITS", description: "Streaming Platform", image: tvBitsImage },
+  { name: "TV BITS", description: "Streaming Platform", image: tvBitsImage, link: "/projects/tv-bits" },
   {
     name: "LV Tech",
     description: "Technician Services Project",
     image: lvTechImage,
+    link: "/projects/lv-tech",
   },
 ];
 const tools = [
@@ -236,10 +248,12 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <ExternalLink
-                  className="text-portfolio-text-muted flex-shrink-0"
-                  size={16}
-                />
+                <Link to={project.link}>
+                  <ExternalLink
+                    className="text-portfolio-text-muted flex-shrink-0"
+                    size={16} 
+                  />
+                </Link>
               </CardContent>
             </Card>
           ))}

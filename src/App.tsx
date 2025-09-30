@@ -8,8 +8,14 @@ import Home from "./pages/Home";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import Writings from "./pages/Writings";
-import ProjectDetail from "./pages/ProjectDetail";
 import NotFound from "./pages/NotFound";
+import MindHushProjectDetail from "./pages/MindHush";
+import LottoStrategies from "./pages/LottoStrategies";
+import Lordev from "./pages/Lordev";
+import MoreLife from "./pages/MoreLife";
+import NobelAdventure from "./pages/NobelAdventure";
+import GymRepairs from "./pages/GymRepairs";
+import TvBits from "./pages/TvBits";
 
 const queryClient = new QueryClient();
 
@@ -23,7 +29,13 @@ const App = () => (
           <Route path="/" element={<Layout><Home /></Layout>} />
           <Route path="/experience" element={<Layout><Experience /></Layout>} />
           <Route path="/projects" element={<Layout><Projects /></Layout>} />
-          <Route path="/projects/:slug" element={<Layout><ProjectDetail /></Layout>} />
+          <Route path="/projects/mind-hush" element={<Layout><MindHushProjectDetail /></Layout>} />
+          <Route path="/projects/lotto-strategies" element={<Layout><LottoStrategies /></Layout>} />
+          <Route path="/projects/lordev" element={<Layout><Lordev /></Layout>} />
+          <Route path="/projects/more-life" element={<Layout><MoreLife /></Layout>} />
+          <Route path="/projects/noble-adventure" element={<Layout><NobelAdventure /></Layout>} />
+          <Route path="/projects/gym-repairs" element={<Layout><GymRepairs /></Layout>} />
+          <Route path="/projects/tv-bits" element={<Layout><TvBits /></Layout>} />
           <Route path="/writings" element={<Layout><Writings /></Layout>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

@@ -8,9 +8,9 @@ import mindHushImage from "@/assets/mind-hush.png";
 import lottoStrategiesImage from "@/assets/lotto-strategies.png";
 import lordevImage from "@/assets/lordev.png";
 import moreLifeImage from "@/assets/more-life.png";
-import cumberlandBiotherapeuticsImage from "@/assets/cumberland.png";
 import nobleAdventureImage from "@/assets/noble-adventure.png";
 import gymRepairsImage from "@/assets/gym-repairs.png";
+import cumberlandBiotherapeuticsImage from "@/assets/cumberland.png";
 
 const projects = [
   {
@@ -33,6 +33,12 @@ const projects = [
     name: "Noble Adventure",
     description: "Travel and Tourism Company",
     image: nobleAdventureImage,
+  },
+  { name: "TV BITS", description: "Streaming Platform", image: tvBitsImage, link: "/projects/tv-bits" },
+  {
+    name: "Cumberland Biotherapeutics",
+    description: "health-focused organization site",
+    image: cumberlandBiotherapeuticsImage,
   },
   {
     name: "GYM REPAIRS",
