@@ -2,19 +2,34 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Layers, Grid2X2 } from 'lucide-react';
+
+import tvBitsImage from '@/assets/tv-bits.png';
+import lvTechImage from '@/assets/lv-tech.png';
+import mindHushImage from '@/assets/mind-hush.png';
+import lottoStrategiesImage from '@/assets/lotto-strategies.png';
+import lordevImage from '@/assets/lordev.png';
+import moreLifeImage from '@/assets/more-life.png';
+import cumberlandBiotherapeuticsImage from '@/assets/cumberland.png';
+import nobleAdventureImage from '@/assets/noble-adventure.png';
+import gymRepairsImage from '@/assets/gym-repairs.png';
 
 const projects = [
-  { name: 'Mind Hush', description: 'AI-driven mental health chatbot', color: 'bg-slate-700' },
-  { name: 'Lotto Strategies', description: 'Lottery Strategy tools and Guidance', color: 'bg-red-600' },
-  { name: 'LORDEV', description: 'Soft Dev Company site', color: 'bg-blue-600' },
-  { name: 'More Life', description: 'Event Management and Ticketing System', color: 'bg-gray-600' },
-  { name: 'TV BITS', description: 'Streaming Platform', color: 'bg-red-700' },
-  { name: 'Cumberland Biotherapeutics', description: 'Health-focused organization site', color: 'bg-blue-700' },
-  { name: 'Noble Adventure', description: 'Travel and Tourism Company', color: 'bg-blue-500' },
-  { name: 'GYM REPAIRS', description: 'Gym Repair and Maintenance Company site', color: 'bg-gray-700' },
+  { name: 'Mind Hush', description: 'AI-driven mental health chatbot', image: mindHushImage },
+  { name: 'Lotto Strategies', description: 'Lottery Strategy tools and Guidance', image: lottoStrategiesImage },
+  { name: 'LORDEV', description: 'Soft Dev Company site', image: lordevImage },
+  { name: 'More Life', description: 'Event Management and Ticketing System', image: moreLifeImage },
+  { name: 'TV BITS', description: 'Streaming Platform', image: tvBitsImage },
+  { name: 'Cumberland Biotherapeutics', description: 'Health-focused organization site', image: cumberlandBiotherapeuticsImage },
+  { name: 'Noble Adventure', description: 'Travel and Tourism Company', image: nobleAdventureImage },
+  { name: 'GYM REPAIRS', description: 'Gym Repair and Maintenance Company site', image: gymRepairsImage },
 ];
 
+
+const caseStudies = [
+  { name: 'TV BITS', description: 'Streaming Platform', image: tvBitsImage },
+  { name: 'LV Tech', description: 'Technician Services Project', image: lvTechImage },
+];
 const tools = [
   { name: 'Figma', icon: '🎨' },
   { name: 'ChatGPT', icon: '🤖' },
@@ -31,19 +46,22 @@ const articles = [
     title: 'The Clash Between Aesthetic Trends and Usability: Where Do We Draw the Line?',
     description: 'This article explores the tension between trendy aesthetics and practical usability in design, emphasizing the need for balance.',
     date: 'Aug 4, 2024',
-    readTime: '3 min read'
+    readTime: '3 min read',
+    link: 'https://medium.com/@maryamsaeed0119/the-clash-between-aesthetic-trends-and-usability-where-do-we-draw-the-line-fdb940ed9550'
   },
   {
     title: 'Design Systems: Your Ultimate Cheat Code for UX Design Success',
     description: 'Design systems streamline UX design by providing reusable components and consistent guidelines.',
     date: 'Aug 18, 2024',
-    readTime: '2 min read'
+    readTime: '2 min read',
+    link: 'https://medium.com/@maryamsaeed0119/design-systems-your-ultimate-cheat-code-for-ux-design-success-a6449f2ab1c1'
   },
   {
     title: 'Social Media Hesitation: It\'s More Than Just Procrastination',
     description: 'Social media hesitation often runs deeper than procrastination.',
     date: 'Jan 20, 2025',
-    readTime: '2 min read'
+    readTime: '2 min read',
+    link: 'https://medium.com/@maryamsaeed0119/title-social-media-hesitation-its-more-than-just-procrastination-9410e94ddb81'
   }
 ];
 
@@ -64,50 +82,94 @@ export default function Home() {
               With a focus on beauty, clarity, and purpose, I transform visions into timeless digital products.
             </p>
           </div>
-          
-          <div className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start">
-            <Card className="bg-portfolio-orange p-4 md:p-6 text-background">
-              <CardContent className="p-0">
-                <div className="text-2xl md:text-3xl font-bold">2</div>
-                <div className="text-xs md:text-sm">Years</div>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-portfolio-orange p-4 md:p-6 text-background">
-              <CardContent className="p-0">
-                <div className="text-2xl md:text-3xl font-bold">+20</div>
-                <div className="text-xs md:text-sm">Projects</div>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-portfolio-green p-4 md:p-6 text-background">
-              <CardContent className="p-0">
-                <div className="text-2xl md:text-3xl font-bold">90%</div>
-                <div className="text-xs md:text-sm">Success</div>
-              </CardContent>
-            </Card>
-          </div>
         </div>
-        
-        <div className="mt-6 lg:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md">
-          <Card className="bg-portfolio-orange p-3 md:p-4 text-background text-center">
+      </section>
+
+      {/* Statistics Section */}
+      <section>
+        <div className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start">
+          <Card className="bg-portfolio-black p-4 md:p-6 text-white">
             <CardContent className="p-0">
-              <div className="text-xs md:text-sm font-medium">DYNAMIC ANIMATION</div>
-              <div className="text-xs">MOTION DESIGNER</div>
+              <div className="text-4xl md:text-5xl font-bold">2</div>
+              <div className="text-xs text-white/70">YEARS OF EXPERIENCE</div>
             </CardContent>
           </Card>
-          <Card className="bg-portfolio-green p-3 md:p-4 text-background text-center">
+          
+          <Card className="bg-portfolio-black  p-4 md:p-6 text-white">
             <CardContent className="p-0">
-              <div className="text-xs md:text-sm font-medium">SKETCH, WIREFRAME, UX</div>
-              <div className="text-xs">PROTOTYPING</div>
+              <div className="text-4xl md:text-5xl font-bold">+20</div>
+              <div className="text-xs text-white/70">PROJECTS COMPLETED</div>
+            </CardContent>
+          </Card>
+          
+          <Card className="bg-portfolio-black  p-4 md:p-6 text-white">
+            <CardContent className="p-0">
+              <div className="text-4xl md:text-5xl font-bold">90%</div>
+              <div className="text-xs text-white/70">CLIENT SATISFACTION</div>
             </CardContent>
           </Card>
         </div>
       </section>
 
+
+      <section>
+        <div className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start">
+          <Card className="bg-portfolio-orange p-4 md:p-6 text-background rounded-lg w-56 h-48 flex items-center justify-center">
+            <CardContent className="p-0 text-left">
+              <Layers className="w-8 h-8 md:w-10 md:h-10 mb-2 text-white" />
+              <div className="text-sm text-white font-bold leading-tight">DYNAMIC ANIMATION, MOTION DESIGN</div>
+            </CardContent>
+          </Card>
+          
+          <Card className="bg-portfolio-green p-4 md:p-6 text-background rounded-lg  w-56  h-48 flex items-center justify-center">
+            <CardContent className="p-0 text-left">
+              <Grid2X2 className="w-8 h-8 md:w-10 md:h-10 mb-2 text-black" />
+              <div className="text-sm text-black font-bold leading-tight">SKETCH, MIRO FIGMA, MAZE</div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+       {/* Case Studies */}
+       <section>
+        <h2 className="text-3xl md:text-6xl font-bold text-foreground mb-2">
+          CASE STUDY
+          <br />
+          <span className="text-portfolio-text-muted">PROJECTS</span>
+        </h2>
+        
+        <div className="space-y-4 mt-8">
+          {caseStudies.map((project, index) => (
+            <Card key={index} className="bg-card border-border hover:bg-secondary/50 transition-colors cursor-pointer">
+              <CardContent className="p-4 md:p-6 flex items-center justify-between">
+                  <div className="flex items-center gap-3 md:gap-4">
+                    <div className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 overflow-hidden aspect-square">
+                      {project.image ? (
+                        <img 
+                          src={project.image} 
+                          alt={project.name}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-slate-700 rounded-lg"></div>
+                      )}
+                    </div>
+                    <div className="min-w-0">
+                      <h3 className="font-semibold text-foreground text-sm md:text-base truncate">{project.name}</h3>
+                      <p className="text-xs md:text-sm text-portfolio-text-muted line-clamp-2">{project.description}</p>
+                    </div>
+                  </div>
+                <ExternalLink className="text-portfolio-text-muted flex-shrink-0" size={16} />
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+
       {/* Recent Projects */}
       <section>
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+        <h2 className="text-3xl md:text-6xl font-bold text-foreground mb-2">
           RECENT
           <br />
           <span className="text-portfolio-text-muted">PROJECTS</span>
@@ -118,7 +180,17 @@ export default function Home() {
             <Card key={index} className="bg-card border-border hover:bg-secondary/50 transition-colors cursor-pointer">
               <CardContent className="p-4 md:p-6 flex items-center justify-between">
                   <div className="flex items-center gap-3 md:gap-4">
-                    <div className={`w-10 h-10 md:w-12 md:h-12 ${project.color} rounded-lg flex-shrink-0`}></div>
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg flex-shrink-0 overflow-hidden aspect-square">
+                      {project.image ? (
+                        <img 
+                          src={project.image} 
+                          alt={project.name}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-slate-700 rounded-lg"></div>
+                      )}
+                    </div>
                     <div className="min-w-0">
                       <h3 className="font-semibold text-foreground text-sm md:text-base truncate">{project.name}</h3>
                       <p className="text-xs md:text-sm text-portfolio-text-muted line-clamp-2">{project.description}</p>
@@ -214,23 +286,31 @@ export default function Home() {
         
         <div className="space-y-6">
           {articles.map((article, index) => (
-            <Card key={index} className="bg-card border-border hover:bg-secondary/50 transition-colors cursor-pointer">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-semibold text-foreground text-lg leading-tight flex-1 pr-4">
-                    {article.title}
-                  </h3>
-                  <ExternalLink className="text-portfolio-text-muted flex-shrink-0" size={20} />
-                </div>
-                <p className="text-portfolio-text-muted text-sm mb-3 leading-relaxed">
-                  {article.description}
-                </p>
-                <div className="flex justify-between items-center text-xs text-portfolio-text-muted">
-                  <span>{article.date}</span>
-                  <span>{article.readTime}</span>
-                </div>
-              </CardContent>
-            </Card>
+            <a 
+              key={index} 
+              href={article.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <Card className="bg-card border-border hover:bg-secondary/50 transition-colors cursor-pointer group">
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="font-semibold text-foreground text-lg leading-tight flex-1 pr-4 group-hover:text-portfolio-orange transition-colors">
+                      {article.title}
+                    </h3>
+                    <ExternalLink className="text-portfolio-text-muted group-hover:text-portfolio-orange transition-colors flex-shrink-0" size={20} />
+                  </div>
+                  <p className="text-portfolio-text-muted text-sm mb-3 leading-relaxed">
+                    {article.description}
+                  </p>
+                  <div className="flex justify-between items-center text-xs text-portfolio-text-muted">
+                    <span>{article.date}</span>
+                    <span>{article.readTime}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            </a>
           ))}
         </div>
       </section>

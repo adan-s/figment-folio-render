@@ -13,7 +13,7 @@ export const Layout = ({ children }: LayoutProps) => {
       <Navigation />
       <ContactButtons />
       
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 p-4 md:p-8 lg:p-12 pt-20 md:pt-24">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 p-4 md:p-8 lg:p-12 pt-24 md:pt-32 lg:pt-36 justify-center items-center lg:items-start max-w-7xl mx-auto">
         <aside className="flex-shrink-0 w-full lg:w-auto flex justify-center lg:block">
           <ProfileCard />
         </aside>

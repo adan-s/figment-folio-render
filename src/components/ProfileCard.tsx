@@ -2,7 +2,7 @@ import profilePhoto from '@/assets/profile-photo.jpg';
 
 export const ProfileCard = () => {
   return (
-    <div className="bg-card p-6 md:p-8 rounded-2xl w-full max-w-sm lg:w-80 flex flex-col items-center text-center space-y-4 md:space-y-6">
+    <div className="bg-white p-6 md:p-8 rounded-2xl w-full max-w-md lg:w-64 flex flex-col items-center text-center space-y-4 md:space-y-6 border-2 border-portfolio-orange">
       <div className="relative">
         <img 
           src={profilePhoto} 
@@ -17,7 +17,7 @@ export const ProfileCard = () => {
       </div>
       
       <div>
-        <h2 className="text-2xl font-bold text-foreground">Maryam Saeed</h2>
+        <h2 className="text-2xl font-bold text-black">Maryam Saeed</h2>
         <div className="mt-4 relative">
           <div className="w-12 h-0.5 bg-portfolio-orange mx-auto"></div>
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-portfolio-orange rounded-full"></div>
@@ -25,7 +25,7 @@ export const ProfileCard = () => {
         </div>
       </div>
       
-      <p className="text-portfolio-text-muted text-sm leading-relaxed">
+      <p className="text-black text-sm leading-relaxed">
         A UI/UX Designer blending creativity and strategy to build standout digital products.
       </p>
     </div>

@@ -1,14 +1,14 @@
-import { Link, useLocation } from 'react-router-dom';
-import { Home, User, FileText, FolderOpen } from 'lucide-react';
+import { Link, useLocation } from "react-router-dom";
+import { Home, FolderOpen, Briefcase, Edit } from "lucide-react";
 
 export const Navigation = () => {
   const location = useLocation();
-  
+
   const navItems = [
-    { icon: Home, path: '/', label: 'Home' },
-    { icon: User, path: '/experience', label: 'Experience' },
-    { icon: FolderOpen, path: '/projects', label: 'Projects' },
-    { icon: FileText, path: '/writings', label: 'Writings' },
+    { icon: Home, path: "/", label: "Home" },
+    { icon: FolderOpen, path: "/projects", label: "Projects" },
+    { icon: Briefcase, path: "/experience", label: "Experience" },
+    { icon: Edit, path: "/writings", label: "Writings" },
   ];
 
   return (
@@ -20,8 +20,8 @@ export const Navigation = () => {
             to={path}
             className={`p-2 md:p-3 rounded-full transition-all duration-200 ${
               location.pathname === path
-                ? 'bg-portfolio-orange text-background'
-                : 'text-portfolio-text-muted hover:text-foreground hover:bg-muted'
+                ? "bg-portfolio-orange text-white"
+                : "text-portfolio-text-muted hover:text-foreground hover:bg-muted"
             }`}
             title={label}
           >
