@@ -1,4 +1,7 @@
-import mindHushMockups from "../assets/mind-hush-detail.png";
+import gymRepairsMockup1 from "../assets/gym-mockup-1.png";
+import gymRepairsMockup2 from "../assets/gym-mockup-2.png";
+import gymRepairsMockup3 from "../assets/gym-mockup-3.png";
+import gymRepairsMockup4 from "../assets/gym-mockup-4.png";
 
 export default function GymRepairs() {
   return (
@@ -8,19 +11,16 @@ export default function GymRepairs() {
         <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-8">
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-              MIND HUSH
+              GYM REPAIRS
               <br />
               <span className="text-portfolio-text-muted">PROJECT</span>
             </h1>
             <p className="text-portfolio-text-muted mt-6 max-w-lg leading-relaxed mx-auto lg:mx-0">
-            An AI-driven mental health chatbot designed to provide round-the-clock support for stress, 
-            anxiety, and emotional challenges. Built with empathy and accessibility in mind, it offers a safe, 
-            user-centered space for meaningful, judgment-free conversations—anytime, anywhere
+              Gym Repairs is a company offering professional repair and maintenance services for gym equipment. They needed a website that communicates trust, explains services clearly, and makes it easy for customers to get in touch.
             </p>
           </div>
         </div>
       </section>
-
 
       <section>
         <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-8">
@@ -30,9 +30,10 @@ export default function GymRepairs() {
               <span className="text-portfolio-text-muted">STATEMENT</span>
             </h1>
             <p className="text-portfolio-text-muted mt-6 max-w-lg leading-relaxed mx-auto lg:mx-0">
-            Design a chatbot interface for people experiencing stress and anxiety that uses a calming,
-             non-annoying theme while fostering a sense of empathy and connection,
-             encouraging users to share their feelings openly and without hesitation
+              When I first looked at the problem, I realized that most event platforms feel either too basic or too overloaded. Users are often forced to jump between discovery and ticketing systems, creating unnecessary friction. I wanted to solve that by building a centralized, visually engaging, and user-friendly experience.
+            </p>
+            <p className="text-portfolio-text-muted mt-6 max-w-lg leading-relaxed mx-auto lg:mx-0">
+              For me, the key challenge was balancing both user types — attendees looking for quick access to events and tickets, and organizers needing clarity and control over listings and bookings.
             </p>
           </div>
         </div>
@@ -47,30 +48,10 @@ export default function GymRepairs() {
               <span className="text-foreground">OBJECTIVES</span>
             </h1>
             <ul className="text-portfolio-text-muted mt-6 max-w-lg leading-relaxed mx-auto lg:mx-0 list-disc list-outside space-y-2 pl-6">
-              <li>Create a safe, welcoming digital environment for mental health conversations.</li>
-              <li>Design a chatbot interface that feels human, empathetic, and supportive.</li>
-              <li>Ensure accessibility and ease of use for diverse users across devices.</li>
-              <li>Provide 24/7 availability to offer continuous support.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-8">
-          <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-4xl md:text-3xl lg:text-4xl font-bold text-foreground">
-              RESEARCH&nbsp;
-              <span className="text-portfolio-text-muted">&</span>&nbsp;
-              <span className="text-foreground">INSIGHTS</span>
-            </h1>
-            <p className="text-portfolio-text-muted mt-6 max-w-lg leading-relaxed mx-auto lg:mx-0">
-              Though this was a concept project, research focused on understanding user pain points related to mental health apps, highlighting the need for:
-            </p>
-            <ul className="text-portfolio-text-muted mt-6 max-w-lg leading-relaxed mx-auto lg:mx-0 list-disc list-outside space-y-2 pl-6">
-              <li>Non-clinical, conversational tone to reduce intimidation.</li>
-              <li>Quick access to practical coping strategies.</li>
-              <li>A calming, visually comforting UI design.</li>
+              <li>Clearly showcase services and expertise</li>
+              <li>Build credibility and professionalism through design</li>
+              <li>Ensure users can quickly request a service or contact the team</li>
+              <li>Make the site responsive and easy to navigate</li>
             </ul>
           </div>
         </div>
@@ -84,69 +65,16 @@ export default function GymRepairs() {
               <span className="text-portfolio-text-muted">PROCESS</span>
             </h1>
             <p className="text-portfolio-text-muted mt-6 max-w-lg leading-relaxed mx-auto lg:mx-0">
-            I started with user flows emphasizing simplicity in navigating chatbot conversations. 
-            Wireframes were iterated to optimize message readability and interaction clarity. 
-            The visual design took inspiration from calming colors and
-            soft gradients to evoke a sense of safety.
-            <br />
-            <br />
-            Usability was prioritized by minimizing input friction, with clear prompts and an uncluttered layout.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-8">
-          <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-4xl md:text-3xl lg:text-4xl font-bold text-foreground">
-              VISUAL&nbsp;
-              <span className="text-portfolio-text-muted">DESIGN</span>
-            </h1>
-            <p className="text-portfolio-text-muted mt-6 max-w-lg leading-relaxed mx-auto lg:mx-0">
-              The final design uses a dark mode interface with accents of purple and teal, balancing warmth and professionalism. Typography choices focus on readability and calmness. Components such as chat bubbles, buttons, and icons are designed to enhance engagement without overwhelming the user.
-            </p>
-            <p className="text-portfolio-text-muted mt-6 max-w-lg leading-relaxed mx-auto lg:mx-0">
-              Screens include:
+              I created a clean, structured layout featuring:
             </p>
             <ul className="text-portfolio-text-muted mt-6 max-w-lg leading-relaxed mx-auto lg:mx-0 list-disc list-outside space-y-2 pl-6">
-              <li>Sign-in and onboarding screens to introduce the user gently.</li>
-              <li>Chat interface with smooth interaction flow and empathetic messaging.</li>
+              <li>A strong hero section with service highlights and CTA</li>
+              <li>Clear breakdown of services (repairs, maintenance, diagnostics)</li>
+              <li>Why choose us section with trust signals (certifications, years of experience)</li>
+              <li>Contact form and service request CTA at key touchpoints</li>
             </ul>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-8">
-          <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-4xl md:text-3xl lg:text-4xl font-bold text-foreground">
-              CHALLENGES&nbsp;
-              <span className="text-portfolio-text-muted">&</span>&nbsp;
-              <span className="text-foreground">SOLUTIONS</span>
-            </h1>
-            <div className="text-portfolio-text-muted mt-6 max-w-lg leading-relaxed mx-auto lg:mx-0 space-y-4">
-              <div>
-               <p> <span className="font-semibold text-foreground">Challenge:</span> Designing a chatbot UI that feels empathetic and personal despite being AI-driven.</p>
-              </div>
-              <div>
-                <p> <span className="font-semibold text-foreground">Solution:</span> Leveraged conversational UI patterns, friendly microcopy, and soothing visuals to humanize the experience.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-8">
-          <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-4xl md:text-3xl lg:text-4xl font-bold text-foreground">
-              OUTCOME&nbsp;
-              <span className="text-portfolio-text-muted">&</span>&nbsp;
-              <span className="text-foreground">IMPACT</span>
-            </h1>
             <p className="text-portfolio-text-muted mt-6 max-w-lg leading-relaxed mx-auto lg:mx-0">
-              Mind Hush delivers a calming, accessible mental health tool designed to be available anytime, anywhere, supporting users in managing their well-being with dignity and compassion.
+              The visual style combines dark tones and high-contrast accents to reflect strength, precision, and professionalism — fitting for a gym-centered business.
             </p>
           </div>
         </div>
@@ -156,10 +84,11 @@ export default function GymRepairs() {
         <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-8">
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-4xl md:text-3xl lg:text-4xl font-bold text-foreground">
-              <span className="text-portfolio">REFLECTION</span>
+              <span className="text-foreground">FINAL&nbsp;</span>
+              <span className="text-portfolio-text-muted">REFLECTION</span>
             </h1>
             <p className="text-portfolio-text-muted mt-6 max-w-lg leading-relaxed mx-auto lg:mx-0">
-              This project sharpened my skills in designing for sensitive topics and crafting UX that balances technology with emotional intelligence. Moving forward, integrating real user feedback and iterative testing would further enhance the product's impact.
+              The result was a modern, responsive website that helps Gym Repairs attract, inform, and convert visitors into clients — while reinforcing their position as experts in the fitness industry.
             </p>
           </div>
         </div>
@@ -172,13 +101,19 @@ export default function GymRepairs() {
               DESIGN&nbsp;
               <span className="text-portfolio-text-muted">MOCKUPS</span>
             </h1>
-            <p className="text-portfolio-text-muted mt-6 max-w-lg leading-relaxed mx-auto lg:mx-0">
-              This project sharpened my skills in designing for sensitive topics and crafting UX that balances technology with emotional intelligence. Moving forward, integrating real user feedback and iterative testing would further enhance the product's impact.
-            </p>
           </div>
         </div>
         <div className="flex justify-center mt-10">
-          <img src={mindHushMockups} alt="Mind Hush Mockups" className="w-full max-w-2xl" />
+            <img src={gymRepairsMockup1} alt="Gym Repairs Mockup 1" className="w-full max-w-2xl" />
+          </div>
+          <div className="flex justify-center mt-10">
+            <img src={gymRepairsMockup2} alt="Gym Repairs Mockup 2" className="w-full max-w-2xl" />
+        </div>
+        <div className="flex justify-center mt-10">
+          <img src={gymRepairsMockup3} alt="Gym Repairs Mockup 3" className="w-full max-w-2xl" />
+        </div>
+        <div className="flex justify-center mt-10">
+          <img src={gymRepairsMockup4} alt="Gym Repairs Mockup 4" className="w-full max-w-2xl" />
         </div>
       </section>
 

@@ -39,6 +39,7 @@ const projects = [
     name: "Cumberland Biotherapeutics",
     description: "health-focused organization site",
     image: cumberlandBiotherapeuticsImage,
+    link: "/projects/cumberland",
   },
   {
     name: "GYM REPAIRS",
@@ -159,10 +160,14 @@ export default function Projects() {
                     </p>
                   </div>
                 </div>
-                <ExternalLink
-                  className="text-portfolio-text-muted flex-shrink-0"
-                  size={16}
-                />
+                {project.link && (
+                  <Link to={project.link}>
+                    <ExternalLink
+                      className="text-portfolio-text-muted flex-shrink-0"
+                      size={16}
+                    />
+                  </Link>
+                )}
               </CardContent>
             </Card>
           ))}

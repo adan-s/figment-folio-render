@@ -2,7 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Layers, Grid2X2, Link } from "lucide-react";
+import { ExternalLink, Layers, Grid2X2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import tvBitsImage from "@/assets/tv-bits.png";
 import lvTechImage from "@/assets/lv-tech.png";
@@ -54,6 +55,7 @@ const projects = [
     name: "Cumberland Biotherapeutics",
     description: "health-focused organization site",
     image: cumberlandBiotherapeuticsImage,
+    link: "/projects/cumberland",
   },
   {
     name: "GYM REPAIRS",
@@ -248,7 +250,7 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <Link to={project.link}>
+                <Link to={project.link} target="_blank" rel="noopener noreferrer">
                   <ExternalLink
                     className="text-portfolio-text-muted flex-shrink-0"
                     size={16} 
@@ -296,10 +298,14 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <ExternalLink
-                  className="text-portfolio-text-muted flex-shrink-0"
-                  size={16}
-                />
+                {project.link && (
+                  <Link to={project.link} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink
+                      className="text-portfolio-text-muted flex-shrink-0"
+                      size={16}
+                    />
+                  </Link>
+                )}
               </CardContent>
             </Card>
           ))}

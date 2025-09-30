@@ -16,6 +16,7 @@ import MoreLife from "./pages/MoreLife";
 import NobelAdventure from "./pages/NobelAdventure";
 import GymRepairs from "./pages/GymRepairs";
 import TvBits from "./pages/TvBits";
+import Cumberland from "./pages/Cumberland";
 
 const queryClient = new QueryClient();
 
@@ -36,7 +37,9 @@ const App = () => (
           <Route path="/projects/noble-adventure" element={<Layout><NobelAdventure /></Layout>} />
           <Route path="/projects/gym-repairs" element={<Layout><GymRepairs /></Layout>} />
           <Route path="/projects/tv-bits" element={<Layout><TvBits /></Layout>} />
+          <Route path="/projects/cumberland" element={<Layout><Cumberland /></Layout>} />
           <Route path="/writings" element={<Layout><Writings /></Layout>} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
