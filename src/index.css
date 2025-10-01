@@ -6,8 +6,8 @@
 
 @layer base {
   :root {
-    /* Dark Portfolio Theme */
-    --background: 222 20% 10%;
+    /* Dark Portfolio Theme - Pure Black Background */
+    --background: 0 0% 0%;
     --foreground: 0 0% 95%;
 
     --card: 222 20% 12%;
@@ -63,8 +63,8 @@
   }
 
   .dark {
-    /* Keep same dark theme for consistency */
-    --background: 222 20% 10%;
+    /* Keep same dark theme for consistency - Pure Black Background */
+    --background: 0 0% 0%;
     --foreground: 0 0% 95%;
 
     --card: 222 20% 12%;
@@ -108,6 +108,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-black text-foreground;
   }
 }
+

@@ -17,6 +17,7 @@ import NobelAdventure from "./pages/NobelAdventure";
 import GymRepairs from "./pages/GymRepairs";
 import TvBits from "./pages/TvBits";
 import Cumberland from "./pages/Cumberland";
+import TvBitsCaseStudy from "./pages/TvBitsCaseStudy";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/projects/tv-bits" element={<Layout><TvBits /></Layout>} />
           <Route path="/projects/cumberland" element={<Layout><Cumberland /></Layout>} />
           <Route path="/writings" element={<Layout><Writings /></Layout>} />
+          <Route path="/projects/tv-bits-case-study" element={<TvBitsCaseStudy />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

@@ -13,14 +13,14 @@ export const Navigation = () => {
 
   return (
     <nav className="fixed top-4 md:top-8 left-1/2 transform -translate-x-1/2 z-50">
-      <div className="bg-card/90 backdrop-blur-md rounded-full px-1 md:px-2 py-1 md:py-2 flex space-x-0.5 md:space-x-1">
+      <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-full px-3 md:px-4 py-0.5 md:py-1 flex space-x-8 md:space-x-3 shadow-lg">
         {navItems.map(({ icon: Icon, path, label }) => (
           <Link
             key={path}
             to={path}
-            className={`p-2 md:p-3 rounded-full transition-all duration-200 ${
+            className={`p-1.5 md:p-2 rounded-full transition-all duration-200 ${
               location.pathname === path
-                ? "bg-portfolio-orange text-white"
+                ? "bg-white text-black"
                 : "text-portfolio-text-muted hover:text-foreground hover:bg-muted"
             }`}
             title={label}
