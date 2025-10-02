@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Navigation } from "../components/Navigation";
 import tvBitsGlow1 from "../assets/tv-bits-glow-1.png";
 import tvBitsGlow2 from "../assets/tv-bits-glow-2.png";
@@ -10,13 +9,30 @@ import tvBitsProblemImg3 from "../assets/tv-bits-case-problem-statement-img-3.sv
 import tvBitsGoalsImg1 from "../assets/tv-bits-case-goals.svg";
 import tvBitsResearchImg1 from "../assets/tv-bits-case-insights.svg";
 import tvBitsUserFlowImg1 from "../assets/tv-bits-case-user-flow.svg";
+import ellipse1 from "../assets/ellipse-1.svg";
+import ellipse2 from "../assets/ellipse-2.svg";
+import ellipse3 from "../assets/ellipse-3.svg";
+import workFlowImg1 from "../assets/workflow.svg";
+import vector1 from "../assets/vector1.svg";
+import vector2 from "../assets/vector2.svg";
+import vector3 from "../assets/vector3.svg";
+import vector4 from "../assets/vector4.svg";
+import vector5 from "../assets/vector5.svg";
+import tvBitsBranding1 from "../assets/tv-bits-case-branding-1.svg";
+import tvBitsBranding2 from "../assets/tv-bits-case-branding-2.svg";
+import tvBitsBranding3 from "../assets/tv-bits-case-branding-3.svg";
+import tvBitsCaseHowItWorks1 from "../assets/tv-bits-case-how-it-works.svg";
+import tvBitsLastImage1 from "../assets/tv-bits-case-last-image-1.svg";
+import tvBitsLastImage2 from "../assets/tv-bits-case-last-image-2.svg";
+import tvBitsFinalReflectionIcon from "../assets/tv-bits-case-final-reflection-icon.svg";
+import { FaUser, FaEnvelope } from "react-icons/fa";
 
 export default function TvBitsCaseStudy() {
   return (
-    <div className="bg-black text-white font-sans relative min-h-screen">
+    <div className="bg-black text-white font-sans relative min-h-screen overflow-x-hidden">
       {/* Top Left Glow */}
       <div
-        className="fixed top-0 left-0 pointer-events-none"
+        className="absolute top-0 left-0 pointer-events-none"
         style={{ zIndex: 1 }}
       >
         <img
@@ -29,7 +45,7 @@ export default function TvBitsCaseStudy() {
 
       {/* Top Right Glow */}
       <div
-        className="fixed top-0 right-0 pointer-events-none"
+        className="absolute top-0 right-0 pointer-events-none"
         style={{ zIndex: 1 }}
       >
         <img
@@ -100,7 +116,7 @@ export default function TvBitsCaseStudy() {
           </section>
 
           <div
-            className="px-4 py-2 rounded-full backdrop-blur-lg border border-white/40 w-fit mx-auto"
+            className="px-4 py-2 rounded-full backdrop-blur-lg border border-white/40 w-fit mx-auto mb-4 bg-gradient-to-r from-gray-800 to-black"
             style={{ backgroundColor: "transparent" }}
           >
             <div className="flex items-center gap-2">
@@ -109,7 +125,7 @@ export default function TvBitsCaseStudy() {
             </div>
           </div>
           {/* Problem Statement */}
-          <section className="text-center py-10 max-w-4xl mx-auto">
+          <section className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold my-2">
               Problem Statement
             </h1>
@@ -335,102 +351,522 @@ export default function TvBitsCaseStudy() {
             />
           </section>
 
-          {/* Persona */}
-          <section className="bg-gray-900 py-16 px-6">
-            <h2 className="text-2xl font-semibold text-pink-500">
+          {/* User Persona */}
+
+          <div
+            className="px-4 py-2 rounded-full backdrop-blur-lg border border-white/40 w-fit mx-auto mb-4 bg-gradient-to-r from-gray-800 to-black"
+            style={{ backgroundColor: "transparent" }}
+          >
+            <div className="flex items-center gap-2">
+              <img src={tvBitCaseIcon1} alt="TV Bits" className="w-5 h-5" />
+              <p className="text-white text-sm">User Research</p>
+            </div>
+          </div>
+          <section className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-3xl font-bold my-4 mb-4">
               User Persona
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8 mt-6">
-              <div className="bg-black p-6 rounded-lg border border-gray-700">
-                <h3 className="text-xl font-semibold">Persona A</h3>
-                <p className="text-gray-300 mt-2">
-                  Loves movies, streams daily, values easy navigation and quick
-                  access to content.
-                </p>
+            </h1>
+          </section>
+          <div
+            className="rounded-2xl shadow-2xl p-4 max-w-4xl w-full 
+        bg-black border border-white/20 mx-auto"
+          >
+            {/* Grid Layout */}
+            <div className="grid grid-cols-12 gap-6 p-4">
+              {/* Left Side Icon */}
+              <div className="col-span-3 flex justify-center items-center hidden md:block">
+                <div className="bg-black rounded-lg flex items-center justify-center w-full h-full min-h-[400px] relative overflow-hidden">
+                  <span className="text-9xl font-bold text-orange-500 relative z-10">
+                    <FaUser />
+                  </span>
+                  {/* Ellipse in bottom right corner */}
+                  <div className="absolute bottom-0 right-0 pointer-events-none">
+                    <img
+                      src={ellipse1}
+                      alt=""
+                      className="w-70 h-50 opacity-70"
+                      style={{ transform: "translate(0%, 0%)" }}
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="bg-black p-6 rounded-lg border border-gray-700">
-                <h3 className="text-xl font-semibold">Persona B</h3>
-                <p className="text-gray-300 mt-2">
-                  Occasional user, prefers recommendations, and minimal
-                  interaction for content discovery.
+
+              {/* Right Side Content */}
+              <div className="col-span-9 md:col-span-9 col-span-12 grid gap-4">
+                {/* Bio */}
+                <div
+                  className="p-4 rounded-lg relative overflow-hidden h-full"
+                  style={{ backgroundColor: "#1A1A1A" }}
+                >
+                  <h2 className="font-bold text-lg mb-2 text-orange-600">
+                    Bio
+                  </h2>
+                  <p className="text-sm leading-relaxed">
+                    Arooj Fatima is a media student who loves binge-watching and
+                    edits short videos as a hobby. She follows fan edits and
+                    reacts to show clips on TikTok and Instagram.
+                  </p>
+                  {/* Ellipse in bottom right corner */}
+                  <div className="absolute bottom-0 right-0 pointer-events-none">
+                    <img
+                      src={ellipse2}
+                      alt=""
+                      className="w-70 h-30 opacity-30"
+                      style={{ transform: "translate(0%, 0%)" }}
+                    />
+                  </div>
+                </div>
+
+                {/* Demography & Technology */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-full">
+                  <div
+                    className="p-4 rounded-lg relative overflow-hidden h-full"
+                    style={{ backgroundColor: "#1A1A1A" }}
+                  >
+                    <h2 className="font-bold text-lg mb-2 text-orange-600">
+                      Demography
+                    </h2>
+                    <ul className="text-sm space-y-1">
+                      <li>Age: 25 (Targeted Gen Z or Young Millennials)</li>
+                      <li>Gender: Female</li>
+                      <li>Education: Graduated</li>
+                      <li>Profession: Content Creator</li>
+                      <li>Location: Nottingham, UK</li>
+                    </ul>
+                    {/* Ellipse in bottom right corner */}
+                    <div className="absolute bottom-0 right-0 pointer-events-none">
+                      <img
+                        src={ellipse3}
+                        alt=""
+                        className="w-70 h-30 opacity-30"
+                        style={{ transform: "translate(0%, 0%)" }}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="p-4 rounded-lg relative overflow-hidden h-full"
+                    style={{ backgroundColor: "#1A1A1A" }}
+                  >
+                    <h2 className="font-bold text-lg mb-2 text-orange-600">
+                      Technology
+                    </h2>
+                    <ul className="text-lg space-y-2">
+                      <li>Internet</li>
+                      <li>Social Media/Apps</li>
+                      <li>Online Shopping</li>
+                    </ul>
+                    {/* Ellipse in bottom right corner */}
+                    <div className="absolute bottom-0 right-0 pointer-events-none">
+                      <img
+                        src={ellipse2}
+                        alt=""
+                        className="w-70 h-30 opacity-30"
+                        style={{ transform: "translate(0%, 0%)" }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Core needs & Frustrations */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+              <div
+                className="p-4 rounded-lg relative overflow-hidden h-full"
+                style={{ backgroundColor: "#1A1A1A" }}
+              >
+                <h2 className="font-bold text-lg mb-2 text-orange-600">
+                  Core needs
+                </h2>
+                <ul className="text-sm list-disc ml-4 space-y-1">
+                  <li>Quick Watch Of Short Video Clips</li>
+                  <li>Discover New Content Through Short-Form Content</li>
+                  <li>Engage With A TV-Focused Content Community</li>
+                </ul>
+                {/* Ellipse in bottom right corner */}
+                <div className="absolute bottom-0 right-0 pointer-events-none">
+                  <img
+                    src={ellipse3}
+                    alt=""
+                    className="w-70 h-30 opacity-30"
+                    style={{ transform: "translate(0%, 0%)" }}
+                  />
+                </div>
+              </div>
+              <div
+                className="p-4 rounded-lg relative overflow-hidden h-full"
+                style={{ backgroundColor: "#1A1A1A" }}
+              >
+                <h2 className="font-bold text-lg mb-2 text-orange-600">
+                  Frustrations
+                </h2>
+                <ul className="text-sm list-disc ml-4 space-y-1">
+                  <li>Gets Irrelevant Content On TikTok</li>
+                  <li>Can't Find Quality Edits From Her Favorite Shows</li>
+                  <li>
+                    Streaming Platforms Don't Offer Quick Recaps Or Moments
+                  </li>
+                  <li>Finds Fan Content Scattered Across Multiple Platforms</li>
+                </ul>
+                {/* Ellipse in bottom right corner */}
+                <div className="absolute bottom-0 right-0 pointer-events-none">
+                  <img
+                    src={ellipse2}
+                    alt=""
+                    className="w-70 h-30 opacity-30"
+                    style={{ transform: "translate(0%, 0%)" }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Platform usage & Personality trait */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+              <div
+                className="p-4 rounded-lg relative overflow-hidden h-full"
+                style={{ backgroundColor: "#1A1A1A" }}
+              >
+                <h2 className="font-bold text-lg mb-2 text-orange-600">
+                  Platform usage and comfort level
+                </h2>
+                <p className="text-sm">
+                  Comfortable Using Mobile Apps, Social Media, Streaming, And
+                  Light Editing Tools
                 </p>
+                {/* Ellipse in bottom right corner */}
+                <div className="absolute bottom-0 right-0 pointer-events-none">
+                  <img
+                    src={ellipse3}
+                    alt=""
+                    className="w-70 h-30 opacity-30"
+                    style={{ transform: "translate(0%, 0%)" }}
+                  />
+                </div>
+              </div>
+              <div
+                className="p-4 rounded-lg relative overflow-hidden h-full"
+                style={{ backgroundColor: "#1A1A1A" }}
+              >
+                <h2 className="font-bold text-lg mb-2 text-orange-600">
+                  Personality trait
+                </h2>
+                <ul className="text-sm flex gap-3 flex-wrap">
+                  <li className="px-3 py-1 bg-black/40 rounded-lg">
+                    Dedicated
+                  </li>
+                  <li className="px-3 py-1 bg-black/40 rounded-lg">
+                    Disciplined
+                  </li>
+                  <li className="px-3 py-1 bg-black/40 rounded-lg">
+                    Farsighted
+                  </li>
+                </ul>
+                {/* Ellipse in bottom right corner */}
+                <div className="absolute bottom-0 right-0 pointer-events-none">
+                  <img
+                    src={ellipse2}
+                    alt=""
+                    className="w-70 h-30 opacity-30"
+                    style={{ transform: "translate(0%, 0%)" }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Design Process */}
+          <section className="py-16 px-6">
+            <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              {/* Left Side - Content */}
+              <div className="space-y-6 md:col-span-3">
+                <h2 className="text-2xl font-semibold text-white mb-6">
+                  Design Process
+                </h2>
+
+                {/* First Row - 2 Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div
+                    className="p-4 rounded-lg relative overflow-hidden h-full"
+                    style={{ backgroundColor: "#1A1A1A" }}
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <img
+                        src={vector1}
+                        alt="Discovery & Research"
+                        className="w-5 h-5"
+                      />
+                      <h3 className="font-bold text-lg text-white">
+                        Discovery & Research
+                      </h3>
+                    </div>
+                    <p className="text-sm">
+                      In-depth analysis to understand the requirements
+                    </p>
+                  </div>
+                  <div
+                    className="p-4 rounded-lg relative overflow-hidden h-full"
+                    style={{ backgroundColor: "#1A1A1A" }}
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <img
+                        src={vector2}
+                        alt="Design System Creation"
+                        className="w-5 h-5"
+                      />
+                      <h3 className="font-bold text-lg text-white">
+                        Design System Creation
+                      </h3>
+                    </div>
+                    <p className="text-sm">
+                      Building a cohesive design language for consistency.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Second Row - 3 Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div
+                    className="p-4 rounded-lg relative overflow-hidden h-full"
+                    style={{ backgroundColor: "#1A1A1A" }}
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <img
+                        src={vector3}
+                        alt="Wireframe Development"
+                        className="w-5 h-5"
+                      />
+                      <h3 className="font-bold text-lg text-white">
+                        Wireframe Development
+                      </h3>
+                    </div>
+                    <p className="text-sm">
+                      Structuring layouts for optimal user experience.
+                    </p>
+                  </div>
+                  <div
+                    className="p-4 rounded-lg relative overflow-hidden h-full"
+                    style={{ backgroundColor: "#1A1A1A" }}
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <img src={vector4} alt="UI Design" className="w-5 h-5" />
+                      <h3 className="font-bold text-lg text-white">
+                        UI Design
+                      </h3>
+                    </div>
+                    <p className="text-sm">
+                      Crafting visually stunning and intuitive interfaces.
+                    </p>
+                  </div>
+                  <div
+                    className="p-4 rounded-lg relative overflow-hidden h-full"
+                    style={{ backgroundColor: "#1A1A1A" }}
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <img
+                        src={vector5}
+                        alt="Prototyping & Testing"
+                        className="w-5 h-5"
+                      />
+                      <h3 className="font-bold text-lg text-white">
+                        Prototyping & Testing
+                      </h3>
+                    </div>
+                    <p className="text-sm">
+                      Developed interactive Figma prototypes and conduct
+                      testing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-center items-center md:col-span-1">
+                {" "}
+                <img
+                  src={workFlowImg1}
+                  alt="Design Process"
+                  className="max-w-full h-auto rounded-lg"
+                />
               </div>
             </div>
           </section>
 
           {/* Branding & Design System */}
-          <section className="py-16 px-6">
-            <h2 className="text-2xl font-semibold text-pink-500">
+          <div
+            className="px-4 py-2 rounded-full backdrop-blur-lg border border-white/40 w-fit mx-auto mb-4"
+            style={{ backgroundColor: "transparent" }}
+          >
+            <div className="flex items-center gap-2">
+              <img src={vector4} alt="TV Bits" className="w-5 h-5" />
+              <p className="text-white text-sm">Branding</p>
+            </div>
+          </div>
+          <section className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-3xl font-bold my-4 mb-4">
               Branding & Design System
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8 mt-6">
-              <div className="bg-gray-800 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold">Colors</h3>
-                <div className="flex gap-4 mt-4">
-                  <div className="w-10 h-10 rounded-full bg-pink-500"></div>
-                  <div className="w-10 h-10 rounded-full bg-purple-500"></div>
-                  <div className="w-10 h-10 rounded-full bg-orange-500"></div>
+            </h1>
+            <p>
+              Consistent and Effective branding and design system used through
+              out the designs
+            </p>
+          </section>
+          <section className="py-16 px-6">
+            <div className="max-w-6xl mx-auto">
+              {/* First Row - 2 Images */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="flex justify-center">
+                  <img
+                    src={tvBitsBranding2}
+                    alt="TV Bits Branding 1"
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
+                <div className="flex justify-center">
+                  <img
+                    src={tvBitsBranding1}
+                    alt="TV Bits Branding 2"
+                    className="w-full h-auto rounded-lg"
+                  />
                 </div>
               </div>
-              <div className="bg-gray-800 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold">Typography</h3>
-                <p className="text-gray-300 mt-2">Heading: Bold Sans</p>
-                <p className="text-gray-300">Body: Regular Sans</p>
+
+              {/* Second Row - 1 Image */}
+              <div className="flex justify-center">
+                <img
+                  src={tvBitsBranding3}
+                  alt="TV Bits Branding 3"
+                  className="w-full max-w-5xl h-auto rounded-lg"
+                />
               </div>
             </div>
           </section>
 
           {/* Navigation */}
-          <section className="bg-gray-900 py-16 px-6">
-            <h2 className="text-2xl font-semibold text-pink-500">
-              How it works for TV Navigation
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6 mt-6">
-              <div className="bg-black p-6 rounded-lg border border-gray-700">
-                <h3 className="text-lg font-semibold">Step 1</h3>
-                <p className="text-gray-300 mt-2">
-                  User browses categories using remote navigation.
-                </p>
-              </div>
-              <div className="bg-black p-6 rounded-lg border border-gray-700">
-                <h3 className="text-lg font-semibold">Step 2</h3>
-                <p className="text-gray-300 mt-2">
-                  Content preview loads with recommendations.
-                </p>
-              </div>
-              <div className="bg-black p-6 rounded-lg border border-gray-700">
-                <h3 className="text-lg font-semibold">Step 3</h3>
-                <p className="text-gray-300 mt-2">
-                  User selects and plays desired content seamlessly.
-                </p>
-              </div>
+          <div
+            className="px-4 py-2 rounded-full backdrop-blur-lg border border-white/40 w-fit mx-auto mb-4"
+            style={{ backgroundColor: "transparent" }}
+          >
+            <div className="flex items-center gap-2">
+              <img src={vector4} alt="TV Bits" className="w-5 h-5" />
+              <p className="text-white text-sm">How it works</p>
             </div>
+          </div>
+          <section className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-3xl font-bold my-4 mb-4">
+              How it works for TV Navigation{" "}
+            </h1>
+            <img
+              src={tvBitsCaseHowItWorks1}
+              alt="TV Bits How it works"
+              className="w-full max-w-5xl h-auto rounded-lg"
+            />
+          </section>
+
+          {/* Last Image */}
+          <section className="text-center max-w-4xl mx-auto mt-32">
+            <img
+              src={tvBitsLastImage1}
+              alt="TV Bits Last Image"
+              className="w-full max-w-5xl h-auto rounded-lg"
+            />
+          </section>
+
+          <section className="text-center max-w-3xl mx-auto mt-20">
+            <img
+              src={tvBitsLastImage2}
+              alt="TV Bits Last Image"
+              className="w-full max-w-5xl h-auto rounded-lg"
+            />
           </section>
 
           {/* Final Reflection */}
-          <section className="py-16 px-6">
-            <h2 className="text-2xl font-semibold text-pink-500">
+          <div
+            className="px-4 py-2 rounded-full backdrop-blur-lg border border-white/40 w-fit mx-auto mb-4"
+            style={{ backgroundColor: "transparent" }}
+          >
+            <div className="flex items-center gap-2">
+              <img src={vector5} alt="TV Bits" className="w-5 h-5" />
+              <p className="text-white text-sm">Output</p>
+            </div>
+          </div>
+          <section className="text-center mx-auto">
+            <h1 className="text-4xl md:text-3xl font-bold my-4 mb-4">
               Final Reflection
-            </h2>
-            <p className="text-gray-300 mt-4">
-              Designing for TV navigation required balancing simplicity and
-              engagement. The key takeaway was creating a scalable design system
-              that works across devices while remaining accessible.
-            </p>
+            </h1>
+          </section>
+
+          {/* Innovative UI/UX Design Container */}
+          <section className="max-w-4xl mx-auto px-4 py-8">
+            <div
+              className="backdrop-blur-sm border border-transparent rounded-lg p-6"
+              style={{ backgroundColor: "#0A0A0B" }}
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <img
+                  src={tvBitsFinalReflectionIcon}
+                  alt="Innovative UI/UX Design"
+                  className="w-10 h-10"
+                />
+                <h2 className="text-xl font-semibold text-white">
+                  Innovative UI/UX Design
+                </h2>
+              </div>
+              <p className="text-gray-300 leading-relaxed">
+                TV Bits was one of the most dynamic projects I've worked on. As
+                a UI/UX designer, I had to scale my thinking beyond a single
+                device and deeply understand each platform's unique constraints.
+                The challenge of blending short-form, TikTok-style video ads
+                into the TV/web/mobile ecosystem was both exciting and
+                creatively demanding and I'm proud of the solution I delivered.
+              </p>
+            </div>
           </section>
 
           {/* Footer */}
-          <footer className="bg-gray-900 py-12 text-center">
-            <p className="text-gray-400 mb-4">
-              Thanks for watching till the end 🚀
-            </p>
-            <div className="flex justify-center gap-4">
-              <button className="bg-pink-500 px-6 py-2 rounded-lg hover:bg-pink-600">
-                Get in Touch
-              </button>
-              <button className="border border-gray-500 px-6 py-2 rounded-lg hover:bg-gray-700">
-                View More
-              </button>
+          <footer className="max-w-4xl mx-auto px-4 py-8">
+            <div
+              className="backdrop-blur-sm border border-transparent rounded-lg p-12"
+              style={{ backgroundColor: "#0A0A0B" }}
+            >
+              <h2 className="text-3xl font-semibold text-white">
+                If you made it this far, thanks for watching till the very last
+                bit{" "}
+              </h2>
+              <p className="text-gray-300 leading-relaxed mt-6">
+                <strong>Fun Fact:</strong> I switched between mobile, web, and
+                TV layouts so many times, my artboard practically traveled
+                dimensions.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                Still a little confused?
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                No worries ... just like a good plot twist, it all makes sense
+                in the end. And if it doesn’t... I’m always here for a friendly
+                UX chat!
+              </p>
+
+              <div className="flex flex-col sm:flex-row justify-start gap-4 mt-10">
+              <a 
+                href="https://www.behance.net/maryamsaeed18" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <button className="px-6 py-2 font-bold rounded-lg hover:opacity-90 transition-opacity flex items-center gap-2" style={{backgroundColor: "#D54B20", color: "white"}}>
+                  Contact LinkedIn
+                </button>
+              </a>
+              <a 
+                href="mailto:maryamsaeed18@gmail.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <button className="px-6 py-2 font-bold rounded-lg hover:opacity-90 transition-opacity flex items-center gap-2" style={{backgroundColor: "#18181B", color: "white"}}>
+                  <FaEnvelope className="w-4 h-4" />
+                  Email Me
+                </button>
+              </a>
+            </div>
             </div>
           </footer>
         </div>

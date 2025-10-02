@@ -17,24 +17,28 @@ const projects = [
     name: "Mind Hush",
     description: "AI-driven mental health chatbot",
     image: mindHushImage,
+    link: "/projects/mind-hush",
   },
   {
     name: "Lotto Strategies",
     description: "Lottery Strategy tools and Guidance",
     image: lottoStrategiesImage,
+    link: "/projects/lotto-strategies",
   },
-  { name: "LORDEV", description: "Soft Dev Company site", image: lordevImage },
+  { name: "LORDEV", description: "Soft Dev Company site", image: lordevImage, link: "/projects/lordev" },
   {
     name: "More Life",
     description: "Event Management and Ticketing System",
     image: moreLifeImage,
+    link: "/projects/more-life",
   },
   {
     name: "Noble Adventure",
     description: "Travel and Tourism Company",
     image: nobleAdventureImage,
+    link: "/projects/noble-adventure",
   },
-  { name: "TV BITS", description: "Streaming Platform", image: tvBitsImage, link: "/projects/tv-bits" },
+  { name: "TV BITS", description: "Streaming Platform", image: tvBitsImage, link: "/projects/tv-bits-case-study" },
   {
     name: "Cumberland Biotherapeutics",
     description: "health-focused organization site",
@@ -45,11 +49,12 @@ const projects = [
     name: "GYM REPAIRS",
     description: "Gym Repair and Maintenance Company site",
     image: gymRepairsImage,
+    link: "/projects/gym-repairs",
   },
 ];
 
 const caseStudies = [
-  { name: "TV BITS", description: "Streaming Platform", image: tvBitsImage },
+  { name: "TV BITS", description: "Streaming Platform", image: tvBitsImage, link: "/projects/tv-bits-case-study" },
   {
     name: "LV Tech",
     description: "Technician Services Project",
@@ -114,10 +119,14 @@ export default function Projects() {
                     </p>
                   </div>
                 </div>
-                <ExternalLink
-                  className="text-portfolio-text-muted flex-shrink-0"
-                  size={16}
-                />
+                {project.link && (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink
+                      className="text-portfolio-text-muted flex-shrink-0"
+                      size={16}
+                    />
+                  </a>
+                )}
               </CardContent>
             </Card>
           ))}
@@ -161,12 +170,12 @@ export default function Projects() {
                   </div>
                 </div>
                 {project.link && (
-                  <Link to={project.link}>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
                     <ExternalLink
                       className="text-portfolio-text-muted flex-shrink-0"
                       size={16}
                     />
-                  </Link>
+                  </a>
                 )}
               </CardContent>
             </Card>

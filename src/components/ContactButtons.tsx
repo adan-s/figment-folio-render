@@ -1,6 +1,10 @@
-export const ContactButtons = () => {
+interface ContactButtonsProps {
+  isVisible: boolean;
+}
+
+export const ContactButtons = ({ isVisible }: ContactButtonsProps) => {
   return (
-    <div className="hidden lg:flex fixed bottom-4 left-4 md:bottom-8 md:left-8 flex-col z-50">
+    <div className={`hidden lg:flex fixed bottom-4 left-4 md:bottom-8 md:left-8 flex-col z-50 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
     
       <a 
         href="https://www.behance.net/maryamsaeed18" 

@@ -66,7 +66,7 @@ const projects = [
 ];
 
 const caseStudies = [
-  { name: "TV BITS", description: "Streaming Platform", image: tvBitsImage, link: "/projects/tv-bits" },
+  { name: "TV BITS", description: "Streaming Platform", image: tvBitsImage, link: "/projects/tv-bits-case-study" },
   {
     name: "LV Tech",
     description: "Technician Services Project",
@@ -250,12 +250,14 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
+                {project.link && (  
                 <Link to={project.link} target="_blank" rel="noopener noreferrer">
                   <ExternalLink
                     className="text-portfolio-text-muted flex-shrink-0"
                     size={16} 
                   />
                 </Link>
+                )}
               </CardContent>
             </Card>
           ))}
@@ -455,65 +457,6 @@ export default function Home() {
             </a>
           ))}
         </div>
-      </section>
-
-      {/* Contact Form */}
-      <section>
-        <h2 className="text-4xl font-bold text-foreground mb-8">
-          LET'S WORK
-          <br />
-          <span className="text-portfolio-text-muted">TOGETHER</span>
-        </h2>
-
-        <Card className="bg-card border-border">
-          <CardContent className="p-8 space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="text-sm text-portfolio-text-muted">
-                  Name
-                </label>
-                <Input
-                  className="mt-1 bg-background border-border"
-                  placeholder="Enter your name"
-                />
-              </div>
-              <div>
-                <label className="text-sm text-portfolio-text-muted">
-                  Email
-                </label>
-                <Input
-                  className="mt-1 bg-background border-border"
-                  placeholder="Enter your email"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="text-sm text-portfolio-text-muted">
-                Subject
-              </label>
-              <Input
-                className="mt-1 bg-background border-border"
-                placeholder="Enter subject"
-              />
-            </div>
-
-            <div>
-              <label className="text-sm text-portfolio-text-muted">
-                Message
-              </label>
-              <Textarea
-                className="mt-1 bg-background border-border"
-                rows={6}
-                placeholder="Enter your message"
-              />
-            </div>
-
-            <Button className="bg-portfolio-orange hover:bg-portfolio-orange/90 text-background w-full py-4 md:py-6 text-base md:text-lg">
-              Send Message
-            </Button>
-          </CardContent>
-        </Card>
       </section>
     </div>
   );
